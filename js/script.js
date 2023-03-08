@@ -30,9 +30,10 @@ DomElement.prototype.render = function () {
     elem.textContent = 'Hi, mate!';
 
     document.body.appendChild(elem);
+    return elem;
 };
 
 const myElement = new DomElement('#greet', '100px', '200px', 'turquoise', '30px');
-myElement.render();
-
+const createdElement = myElement.render();
+console.log(createdElement);
 
